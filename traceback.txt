@@ -1,0 +1,72 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While processing the color property of anonymous style:
+  File "game/script.rpy", line 128, in script
+    j "3- ¿Donde se ubica el lago Titicaca?"
+ValueError: invalid literal for int() with base 16: 'r8'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 128, in script
+    j "3- ¿Donde se ubica el lago Titicaca?"
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\ast.py", line 593, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\exports.py", line 999, in say
+    who(what, interact=interact)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\character.py", line 826, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\character.py", line 688, in do_display
+    **display_args)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\character.py", line 491, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 2149, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 2478, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\core.py", line 1677, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 363, in renpy.display.render.render_screen (gen\renpy.display.render.c:5330)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\screen.py", line 598, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 964, in render
+    st, at)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\display\layout.py", line 777, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 140, in renpy.display.render.render (gen\renpy.display.render.c:2153)
+  File "styleproperties.pxi", line 2981, in renpy.styleclass.Style.xmaximum.__get__ (gen\renpy.styleclass.c:147481)
+  File "style.pyx", line 456, in renpy.style.StyleCore._get (gen\renpy.style.c:6189)
+  File "style.pyx", line 652, in renpy.style.build_style (gen\renpy.style.c:8651)
+  File "style.pyx", line 649, in renpy.style.build_style (gen\renpy.style.c:8572)
+  File "stylepropertyfunctions.pxi", line 4768, in renpy.styleclass.color_property (gen\renpy.styleclass.c:41588)
+  File "C:\Users\user\Desktop\renpy-6.18.3-sdk\renpy\easy.py", line 45, in color
+    r = int(c[0]+c[1], 16)
+ValueError: invalid literal for int() with base 16: 'r8'
+
+Windows-7-6.1.7601-SP1
+Ren'Py 6.18.3.761
+Preguntas y Respuestas 0.0
